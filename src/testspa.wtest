@@ -1,0 +1,15 @@
+import personas.*
+import spa.*
+
+describe "test spa" {
+	method initialize() {
+		ramiro.jugarPaddle()
+		spa.atender(ramiro)
+		spa.atender(bruno)
+		spa.atender(olivia)
+	}
+	test "nivel de contractura de ramiro despues de ser atendido" { assert.equals(1, ramiro.nivelContracturado()) }
+	test "ramiro no tiene la piel grasosa" { assert.notThat(ramiro.tienePielGrasosa()) }
+}
+
+//No andaba con olivia porque no estaba definido el metodo darseUnBanioDeVapor() en ese objeto.
